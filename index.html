@@ -1,9 +1,222 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    <div class="container">
-      Hello
+<head>
+<title>PHP Application Programmer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="jscss/w3.css">
+<link rel="stylesheet" href="jscss/slide.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {
+  font-family: "Montserrat", sans-serif
+}
+.w3-row-padding img {
+  margin-bottom: 12px
+}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {
+  width: 120px;
+  background: #222;
+}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {
+  margin-left: 120px
+}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 0
+  }
+}
+.avatar {
+  opacity: .7;
+}
+</style>
+</head>
+<body class="w3-black">
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img class="w3-image avatar" src="images/avatar.jpg" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>PROJECTS</p>
+  </a>
+  <a href="#skills" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-gear w3-xxlarge"></i>
+    <p>SKILLS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important"><i class="fa fa-home"></i> HOME</a>
+    <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important"><i class="fa fa-user"></i> PROJECTS</a>
+    <a href="#skills" class="w3-bar-item w3-button" style="width:25% !important"><i class="fa fa-gear"></i> SKILLS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important"><i class="fa fa-envelope"></i> CONTACT</a>
+  </div>
+</div>
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <!--
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h2 class="w3-jumbo-disabled"><span class="w3-hide-small">PHP</span> Application Developer</h2>
+  </header>
+  -->
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="projects">
+    <h2 class="w3-text-light-grey">Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1/1</div>
+        <img src="images/magnum_api.png" style="width:100%">
+        <div class="text">
+        <h3>Magnum game for POS system: https://magnum4d.my/</h3>
+        1/1. API with encrypt/decrypt engine for the payload and response JSON
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">1/2</div>
+        <img src="images/magnum_kiosk.png" style="width:100%">
+        <div class="text">
+        <h3>Magnum game for POS system: https://magnum4d.my/</h3>
+        1/2. CMS for image/video management
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2/1</div>
+        <img src="images/arms_multilanguage.png" style="width:100%">
+        <div class="text">
+        <h3>ARMS POS and Retail Management System: https://arms.my/</h3>
+        2/1. Laravel and Vue support for multi language
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2/2</div>
+        <img src="images/arms_adjustment.png" style="width:100%">
+        <div class="text">
+        <h3>ARMS POS and Retail Management System: https://arms.my/</h3>
+        2/2. Multi select Vue component support search and add sku to list
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2/2</div>
+        <img src="images/arms_adjustmentlist.png" style="width:100%">
+        <div class="text">
+        <h3>ARMS POS and Retail Management System: https://arms.my/</h3>
+        2/3. Tab Panel Vue component to display object work flow
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2/2</div>
+        <img src="images/rg_barcode.png" style="width:100%">
+        <div class="text">
+        <h3>Barcode Scanner</h3>
+        3/1. Barcode Scanner Management System
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2/2</div>
+        <img src="images/rg_device.png" style="width:100%">
+        <div class="text">
+        <h3>Barcode Scanner</h3>
+        3/2. Barcode Scanner Device Management
+        </div>
+      </div>
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-  </body>
+    <br>
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+    <script src="jscss/slide.js"></script>
+  </div>
+
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="skills">
+    <h2 class="w3-padding-16 w3-text-light-grey">Skills</h2>
+    <p class="w3-wide">PHP</p>
+    <div class="w3-dark-grey">
+      <div class="w3-white" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">MySQL</p>
+    <div class="w3-dark-grey">
+      <div class="w3-white" style="height:28px;width:90%"></div>
+    </div>
+    <p class="w3-wide">Laravel</p>
+    <div class="w3-dark-grey">
+      <div class="w3-white" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Vue</p>
+    <div class="w3-dark-grey">
+      <div class="w3-white" style="height:28px;width:90%"></div>
+    </div>
+    <p class="w3-wide">Others</p>
+    <div class="w3-dark-grey">
+      <div class="w3-white" style="height:28px;width:80%"></div>
+    </div>
+    <br>
+    
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <a href="nguyen_thi_viet_lien_cv_07.2024.pdf"><i class="fa fa-download"></i> Download Resume</a>
+    </button>
+    
+  </div>
+  
+  <!-- Contact Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <h4>Nguyen Thi Viet Lien</h4>
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Ho Chi Minh, Vietnam</p>
+      <p><a href="tel:+840938200580"><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Cellphone: (+84) 0938200580</a></p>
+      <p><a href="mailto:ntvlien@gmail.com"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: ntvlien@gmail.com</a></p>
+    </div>
+    <br>
+    <p>Let's get in touch. Send me a message</p>
+  <!-- End Contact Section -->
+  </div>
+  <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <!--
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    -->
+    <a href="https://www.linkedin.com/in/vietlien/"><i class="fa fa-linkedin w3-hover-opacity w3-margin-right"></i></a>
+    <a href="https://github.com/ScRConstance"><i class="fa fa-github w3-hover-opacity"></i></a>
+    <!--
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    -->
+  <!-- End footer -->
+  </footer>
+<!-- END PAGE CONTENT -->
+</div>
+</body>
 </html>
+
