@@ -20,6 +20,19 @@ body {
 #main_body {
     display:none;
 }
+#maintenance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: xx-large;
+}
 
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section {
     display: block
