@@ -18,10 +18,10 @@ body {
 }
 
 #main_body {
-    display:none;
+    display:flex;
 }
 #maintenance {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     text-align: center;
