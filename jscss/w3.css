@@ -17,9 +17,11 @@ body {
     margin: 0
 }
 
+/*
 #main_body {
     display:flex;
 }
+*/
 #maintenance {
     display: none;
     align-items: center;
